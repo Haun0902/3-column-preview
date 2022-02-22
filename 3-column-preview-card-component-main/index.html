@@ -1,36 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@200;400&display=swap"
+    rel="stylesheet">
   <title>Frontend Mentor | 3-column preview card component</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    img {
+      margin: 50px 50px;
+    }
+
+    p {
+      font-size: 15px;
+      margin: 50px 50px;
+      font-family: 'Lexend Deca', sans-serif;
+      color: white;
+      font-weight: 200;
+      line-height: 1.5em;
+    }
+
+    h1 {
+      margin: 0px 50px;
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      color: white;
+      text-transform: uppercase;
+
+    }
+
+    .button {
+      color: white;
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 200;
+      border-radius: 20px;
+      border-style: solid;
+      width: 120px;
+      margin-left: 50px;
+      text-align: center;
+      padding: 10px 10px;
+      border-width: 1px;
+      cursor: pointer;
+    }
+
+    .card {
+      width: 300px;
+      float: left;
+      height: 500px;
+    }
+
+    .Sedans {
+      background-color: hsl(31, 77%, 52%);
+    }
+
+    .SUVs {
+      background-color: hsl(184, 100%, 22%);
+    }
+
+    .Luxury {
+      background-color: hsl(179, 100%, 13%);
+    }
+
+    html,
+    body {
+      margin: 60px 0px;
+      background-color: hsl(0, 0%, 95%);
+    }
+
+    .container {
+      margin: 10px auto;
+      width: 900px;
+      border-radius: 10px;
+      overflow: hidden;
+
+    }
+
+    @media only screen and (max-width:375px) {
+
+      /* For mobile phones: */
+      .container,
+      .attribution {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+
+
+      }
+
+      .card {
+        width: 100%;
+        border-radius: 0px;
+      }
+
+      .card--first {border-radius: 10px 10px 0 0;}
+      .card--last {border-radius:  0 0 10px 10px;}
+    }
+
+    .clean {
+      clear: both;
+    }
   </style>
 </head>
+
 <body>
-  
-  Sedans
-  Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city 
-  or on your next road trip.
+  <div class="container">
+    <div class="card Sedans  card--first">
+      <img src="./images/icon-sedans.svg" alt="Sedans">
+      <h1>Sedans</h1>
+      <p>Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the city
+        or on your next road trip.</p>
+      <div class="button">Learn More</div>
+    </div>
+    <div class="card SUVs">
+      <img src="./images/icon-suvs.svg" alt="SUVs">
+      <h1>SUVs</h1>
+      <p>Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation
+        and off-road adventures.</p>
+      <div class="button">Learn More</div>
+    </div>
+    <div class="card Luxury card--last">
+      <img src="./images/icon-luxury.svg" alt="luxury">
+      <h1>Luxury</h1>
+      <p>Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury
+        rental and arrive in style.</p>
+      <div class="button">Learn More</div>
+    </div>
+    <div class="clean"></div>
+  </div>
 
-  SUVs
-  Take an SUV for its spacious interior, power, and versatility. Perfect for your next family vacation 
-  and off-road adventures.
 
-  Luxury
-  Cruise in the best car brands without the bloated prices. Enjoy the enhanced comfort of a luxury 
-  rental and arrive in style.
-  
   <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Hau Nguyen</a>.
   </div>
 </body>
+
 </html>
